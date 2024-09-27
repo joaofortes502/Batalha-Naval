@@ -19,4 +19,19 @@ public class Modo {
 
         return retorno;
     }
+
+    /*
+        Retorna 0 para manual e 1 para automatica
+        @param void
+        @return int
+     */
+    public int definirModoDeSelecao(){
+
+        do{
+            System.out.print("Digite 0 para seleção manual e 1 para seleção automática: ");
+            retorno = ler.nextInt();
+        }while(retorno!=0 && retorno!=1);
+
+        return retorno;
+    }
 }
