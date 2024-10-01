@@ -1,9 +1,14 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
         Tabuleiro tabuleiro1 = new Tabuleiro();
         Tabuleiro tabuleiro2 = new Tabuleiro();
         Modo modoDeJogo = new Modo();
         int vez = 1;
+        String pos;
+        int avaliableShips = 10;
 
         int tipoJogo = modoDeJogo.definirModoDeJogo();
 
@@ -13,6 +18,11 @@ public class Main {
             //seleção dos barcos --> Manual ou Automatica?
             int selececao = modoDeJogo.definirModoDeSelecao();
             if(selececao==1){
+                //necessita um metodo que define os parametros de adiconar navio vulgo { pos, tam, sentido }
+                while (avaliableShips!=0){
+                    System.out.print("Informe a posição do barco");
+                    pos = ler.next();
+                }
                 //manual
             }else{
                 //automática
